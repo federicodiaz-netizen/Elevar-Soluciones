@@ -21,9 +21,20 @@ export default async function handler(req, res) {
         });
 
         const result = await respuesta.json();
+
+        // ¡Importante! Verificar si la respuesta de n8n fue exitosa
+        if (!respuesta.ok) {
+            // Registrar el error que devuelve n8n para poder depurarlo
+            console.error("Error desde n8n:", result);
+            // Lanzar un error para que sea capturado por el bloque catch
+            throw new Error(`La API de n8n respondió con el estado: ${respuesta.status}`);
+        }
+
         return res.status(200).json({ ok: true, result });
 
     } catch (error) {
+        // Registrar el error en los logs de Vercel
+        console.error("Error en la función de la API:", error);
         return res.status(500).json({
             ok: false,
             error: error.message
