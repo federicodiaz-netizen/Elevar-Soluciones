@@ -22,6 +22,13 @@ export default async function handler(req, res) {
 
         const result = await respuesta.json();
 
+        // Log para depuración: Siempre mostrar la respuesta de n8n
+        console.log("Respuesta recibida de n8n:", { 
+            status: respuesta.status, 
+            ok: respuesta.ok, 
+            body: result 
+        });
+
         // ¡Importante! Verificar si la respuesta de n8n fue exitosa
         if (!respuesta.ok) {
             // Registrar el error que devuelve n8n para poder depurarlo
