@@ -50,12 +50,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <header class="hero-section hero-background fade-in-section">
         <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">INGENIERIA ESTRATEGICA</h1>
-                    <p class="lead mb-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text">
+                    <h1 class="display-3 fw-bold mb-4">INGENIERIA ESTRATEGICA</h1>
+                    <p class="lead mb-5">
                         Elevamos la eficiencia y dirección estratégica de tu empresa con soluciones a medida. 
                         Acompañamos a gerencias y equipos en la modernización de procesos, reduciendo costos, acelerando decisiones y llevando tu operación a un nuevo nivel.
                     </p>
@@ -63,7 +63,7 @@
                         <a href="contacto.html" class="btn btn-primary btn-lg">
                             <i class="bi bi-envelope me-2"></i>Contactar
                         </a>
-                        <a href="https://api.whatsapp.com/send/?phone=5492975371515&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-success btn-lg">
+                        <a href="https://api.whatsapp.com/send/?phone=5492975371515&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-whatsapp btn-lg">
                             <i class="bi bi-whatsapp me-2"></i>WhatsApp
                         </a>
                     </div>
@@ -75,21 +75,19 @@
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Resumen de Servicios -->
-    <section class="py-5 bg-light">
+    <!-- Sección de Servicios Clave -->
+    <section id="servicios" class="py-5 bg-light fade-in-section">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="display-5 fw-bold mb-3">NUESTROS SERVICIOS</h2>
-                    <p class="lead text-muted">Soluciones profesionales para impulsar tu negocio</p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">NUESTROS SERVICIOS</h2>
+                <p class="lead text-muted">Soluciones profesionales para impulsar tu negocio</p>
             </div>
             <div class="row g-4">
                 <!-- Servicio 1 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 service-card">
                         <div class="card-body text-center p-4">
                             <div class="service-icon mb-3">
                                 <i class="bi bi-code-slash display-4 text-primary"></i>
@@ -103,7 +101,7 @@
                 </div>
                 <!-- Servicio 2 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 service-card">
                         <div class="card-body text-center p-4">
                             <div class="service-icon mb-3">
                                 <i class="bi bi-graph-up display-4 text-primary"></i>
@@ -117,7 +115,7 @@
                 </div>
                 <!-- Servicio 3 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 service-card">
                         <div class="card-body text-center p-4">
                             <div class="service-icon mb-3">
                                 <i class="bi bi-palette display-4 text-primary"></i>
@@ -131,7 +129,7 @@
                 </div>
                 <!-- Servicio 4 -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm border-0">
+                    <div class="card h-100 shadow-sm border-0 service-card">
                         <div class="card-body text-center p-4">
                             <div class="service-icon mb-3">
                                 <i class="bi bi-shield-check display-4 text-primary"></i>
@@ -154,27 +152,53 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-5 bg-primary text-white">
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="py-5 fade-in-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3 class="fw-bold mb-3">¿Listo para comenzar tu proyecto?</h3>
-                    <p class="lead mb-0">
-                        Contactame hoy y descubrí cómo puedo ayudarte a alcanzar tus objetivos.
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Sobre Mí</h2>
+                    <p class="lead mb-4">
+                        Soy un profesional apasionado por la ingeniería y la transformación digital. 
+                        Con años de experiencia acompañando a empresas en su proceso de modernización, 
+                        mi objetivo es aportar soluciones que realmente marquen la diferencia.
                     </p>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>Ingeniero en Informática
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>Especialista en Transformación Digital
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>Consultor Certificado en Metodologías Ágiles
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                    <a href="https://api.whatsapp.com/send/?phone=5492975371515&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-light btn-lg">
-                        <i class="bi bi-whatsapp me-2"></i>Contactar por WhatsApp
-                    </a>
+                <div class="col-lg-6 text-center">
+                    <div class="sobre-mi-imagen">
+                        <i class="bi bi-person-circle display-1 text-primary"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección de Llamada a la Acción (CTA) -->
+    <section id="cta" class="py-5 bg-primary text-white text-center fade-in-section">
+        <div class="container">
+            <h2 class="display-5 mb-4">¿Listo para llevar tu negocio al siguiente nivel?</h2>
+            <p class="lead mb-4">
+                Contáctame hoy y descubre cómo puedo ayudarte a alcanzar tus objetivos.
+            </p>
+            <a href="https://api.whatsapp.com/send/?phone=5492975371515&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-light btn-lg">
+                <i class="bi bi-whatsapp me-2"></i>Contactar por WhatsApp
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="footer bg-dark text-white py-5">
+    <footer class="footer">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
