@@ -54,11 +54,31 @@ body {
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
     font-size: 1.1rem; /* Aumentamos el tamaño de la fuente */
+    position: relative; /* Necesario para el efecto de la línea inferior */
+}
+
+/* Creamos la línea inferior, inicialmente oculta */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease-out;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: var(--color-primary) !important;
+}
+
+/* Mostramos la línea al pasar el ratón o si el enlace está activo */
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 60%;
 }
 
 /* ============================================
@@ -510,8 +530,14 @@ p {
         font-size: 1rem; /* Tamaño original de la fuente para móvil */
     }
 
+    /* Alineamos la línea del hover a la izquierda en el menú móvil */
+    .navbar-nav .nav-link::after {
+        left: 1rem; /* Coincide con el padding del enlace */
+        transform: translateX(0);
+    }
+
     body {
-        padding-top: 70px;
+        padding-top: 58px; /* Ajuste preciso para la altura de la navbar móvil */
     }
     
     .hero-section {
