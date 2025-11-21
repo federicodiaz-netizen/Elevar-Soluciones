@@ -7,7 +7,7 @@
     --color-primary-dark: #1e3a5f;
     --color-primary: #4a90e2;
     --color-secondary: #38b2ac; /* Color secundario */
-    --color-whatsapp: #25d366; /* Color para WhatsApp */
+    --color-whatsapp: #128c7e; /* Tono de WhatsApp más corporativo */
     --color-gray: #f2f2f2;
     --color-light-gray: #f9f9f9; /* Gris claro para fondos */
     --color-white: #ffffff;
@@ -40,7 +40,6 @@ body {
     background-color: var(--color-primary-dark) !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra más suave */
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
 }
 
 .navbar-brand {
@@ -93,14 +92,15 @@ body {
 .hero-image-placeholder {
     background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
     border-radius: 30px; /* Bordes más redondeados */
-    padding: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 400px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px); /* Efecto de desenfoque */
+
+    /* Imagen de fondo para el placeholder */
+    background-image: url('../img/backgroundinicial.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-text h1, .hero-text .lead {
@@ -246,8 +246,8 @@ body {
 }
 
 .btn-whatsapp:hover {
-    background-color: #128c7e;
-    border-color: #128c7e;
+    background-color: #075e54; /* Tono más oscuro para hover */
+    border-color: #075e54;
     color: var(--color-white);
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
@@ -269,8 +269,23 @@ section {
     background-color: var(--color-primary-dark) !important;
 }
 
+.bg-primary p,
+.bg-primary .lead {
+    color: rgba(255, 255, 255, 0.9); /* Blanco semitransparente para suavidad */
+}
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3 {
+    color: var(--color-white);
+}
+
 .bg-whatsapp {
     background-color: var(--color-whatsapp) !important;
+}
+
+.bg-gradient-primary-secondary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
 
 /* ============================================
