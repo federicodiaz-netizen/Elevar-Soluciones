@@ -516,12 +516,6 @@ p {
 
 /* Móviles */
 @media (max-width: 768px) {
-    /* Devolvemos la barra de navegación a un tamaño más compacto en móviles */
-    .navbar {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-    }
-
     .brand-logo {
         height: 32px; /* Tamaño original del logo para móvil */
     }
@@ -545,6 +539,11 @@ p {
         padding-top: 4rem;
         padding-bottom: 4rem;
         text-align: center; /* Centramos el texto del hero en móvil */
+    }
+
+    /* Ocultamos la imagen del hero en la versión móvil */
+    .hero-image-placeholder {
+        display: none;
     }
     
     .display-1 {
@@ -575,10 +574,32 @@ p {
     .card-body {
         padding: 1.5rem !important;
     }
+
+    /* Ajustes para el footer en móvil */
+    .footer {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        /* text-align: center; se elimina para alinear a la izquierda */
+    }
+
+    /* Reducimos el espacio vertical entre las columnas apiladas */
+    .footer .row {
+        --bs-gutter-y: 1rem;
+    }
+
+    /* Reducimos el espacio debajo de los títulos del footer */
+    .footer h5 {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer .brand-logo {
+        height: 48px; /* Hacemos el logo del footer más grande */
+        margin-bottom: 0.5rem;
+    }
 }
 
 /* Tamaños de fuente más grandes para el Hero en Desktop */
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .hero-section .display-1 {
         font-size: 4rem;
     }
