@@ -496,17 +496,33 @@ p {
 
 /* Móviles */
 @media (max-width: 768px) {
+    /* Devolvemos la barra de navegación a un tamaño más compacto en móviles */
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .brand-logo {
+        height: 32px; /* Tamaño original del logo para móvil */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Tamaño original de la fuente para móvil */
+    }
+
     body {
         padding-top: 70px;
     }
     
     .hero-section {
-        padding: 2rem 0;
+        min-height: auto; /* Altura automática en móvil */
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        text-align: center; /* Centramos el texto del hero en móvil */
     }
-
-    /* Ajustamos el display-1 para que no sea tan grande en móvil */
+    
     .display-1 {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Ajuste fino para el título en móvil */
     }
     
     .display-3 {
@@ -532,6 +548,21 @@ p {
     
     .card-body {
         padding: 1.5rem !important;
+    }
+}
+
+/* Tamaños de fuente más grandes para el Hero en Desktop */
+@media (min-width: 769px) {
+    .hero-section .display-1 {
+        font-size: 4rem;
+    }
+    
+    .hero-section .display-2 {
+        font-size: 3rem;
+    }
+    
+    .hero-section .display-3 {
+        font-size: 2.5rem;
     }
 }
 
