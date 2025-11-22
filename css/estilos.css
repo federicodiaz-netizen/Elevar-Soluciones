@@ -548,7 +548,7 @@ p {
 
     /* Aumentamos el tamaño del título en móvil para forzar el salto de línea */
     .hero-section .display-3 {
-        font-size: 3.5rem !important;
+        font-size: 3.2rem !important; /* Reducimos ligeramente el tamaño */
     }
     
     .display-1 {
