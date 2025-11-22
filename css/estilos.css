@@ -545,6 +545,11 @@ p {
     .hero-image-placeholder {
         display: none;
     }
+
+    /* Aumentamos el tamaño del título en móvil para forzar el salto de línea */
+    .hero-section .display-3 {
+        font-size: 3.5rem !important;
+    }
     
     .display-1 {
         font-size: 2.5rem; /* Ajuste fino para el título en móvil */
@@ -596,20 +601,11 @@ p {
         height: 48px; /* Hacemos el logo del footer más grande */
         margin-bottom: 0.5rem;
     }
-}
 
-/* Tamaños de fuente más grandes para el Hero en Desktop */
-@media (min-width: 992px) {
-    .hero-section .display-1 {
-        font-size: 4rem;
-    }
-    
-    .hero-section .display-2 {
-        font-size: 3rem;
-    }
-    
-    .hero-section .display-3 {
-        font-size: 2.5rem;
+    /* Reducimos el padding de la sección de contacto en móvil */
+    .contact-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 
